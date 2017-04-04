@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+	td{
+		width:50px;
+		height:50px;
+	border:2px solid black;
+	text-align:center;
+	font-weight:900;
+	background-color: cyan;
+	text-decoration: grey; 
+}
+</style>
+</head>
+
+	<body>
+		<formName="calc">
+		<table id="calc" border="2px">
+			<tr>
+				<td><input type="button"   value="1" OnClick="calc.display.value+='1'"> </td>
+				<td><input type="button"  value="2" OnClick="calc.display.value+='2'"></td>
+				<td><input type="button" value="3" OnClick="calc.display.value+='3'"></td>
+			</tr>
+			<tr>
+			<td><input type="button" value="4" OnClick="calc.display.value+='4'"></td>
+			<td><input type="button" value="5" OnClick="calc.display.value+='5'"</td>
+			<td><input type="button" value="6"OnClick="calc.display.value+='6'"></td>
+</tr>
+			<tr>
+				<td><input type="button" value="7" OnClick="calc.display.value+='7'"></td>
+				<td><input type="button" value="8" OnClick="calc.display.value+='8'"></td>
+				<td><input type="button" value="9" OnClick="calc.display.value+='9'"></td>
+				<td><input type="button" value="0" OnClick="calc.display.value+='0'"></td>
+			</tr> 
+			<tr>
+				<td><input type="button" value="+" OnClick="calc.display.value+='+'"></td>
+				<td><input type="button" value="-" OnClick="calc.display.value+='-'"></td>
+				<td><input type="button" value="*" OnClick="calc.display.value+='*'"></td>
+				<td><input type="button" value="/" OnClick="calc.display.value+='/'"></td>
+
+			</tr>
+                <tr>
+                	<td><input type="button" value="=" OnClick="calc.display.value=(calc.display.value)"></td>
+                		</tr>
+             <br>
+             <td>
+   			<input type="textfield" name="Result" value=""></td></form>
+		</table>
+		<script type="text/javascript">
+		function c(val)
+		{
+			document.getElementById("calc").value=val;
+		}
+		function v(val)
+		{
+			document.getElementById("calc").value+=val;
+
+		}
+		function e(val)
+		{
+			try
+		}
+		{ 
+		c(eval(document.getElementById("calc").value))
+	    }
+	    catch(e)
+	    {
+	    	c("Error!!")
+	    }
+	    </script>
+	</body>
+	</html>
+		
